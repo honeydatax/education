@@ -1,4 +1,11 @@
 import numpy as np
+from sklearn import preprocessing
 
-inputs=np.array([[1,2,3],[4,5,6],[7,8,9]]);
-print(inputs);
+x=np.arange(10,-10,-1);
+print("[0;31;46m");
+print("array");
+print(x);
+
+y=preprocessing.Binarizer(threshold = 0.5).transform(x.reshape(20,1));
+print("binary array");
+print(y);

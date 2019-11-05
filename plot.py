@@ -1,11 +1,15 @@
 import numpy as np
-from sklearn import preprocessing
+from matplotlib import pyplot
 
 x=np.arange(10,-10,-1);
+y=x*5;
 print("[0;31;46m");
-print("array");
+print("array x");
 print(x);
-
-y=preprocessing.Binarizer(threshold = 0.5).transform(x.reshape(20,1));
-print("binary array");
+print("array y");
 print(y);
+pyplot.title("plot demo");
+pyplot.xlabel("x");
+pyplot.ylabel("y");
+pyplot.plot(x,y,"oc");
+pyplot.show()
